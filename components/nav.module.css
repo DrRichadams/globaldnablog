@@ -1,0 +1,52 @@
+.nav_container {
+    background-color: #fff;
+    width: 70%;
+    margin: 0 auto;
+    transform: translateY(10px);
+    border-radius: 1rem;
+}
+
+.nav_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 3rem;
+}
+
+.logos img {
+    max-width: 140px;
+    width: 100%;
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav_links li {
+    list-style: none;
+}
+
+
+.auth_sect{
+    display: flex;
+    gap: 12px;
+}
+
+.auth_sect button{
+    border: none;
+    padding: 8px 1.5rem;
+    border-radius: 8px;
+}
+
+.auth_login {
+    color: #0042FF;
+    background-color: transparent;
+}
+
+.auth_signup {
+    background: #0042FF;
+    color: #fff;
+}
+

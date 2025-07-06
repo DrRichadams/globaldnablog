@@ -3,13 +3,6 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 html,
 body {
   max-width: 100vw;
@@ -18,10 +11,12 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  /* background: var(--background); */
+  background: linear-gradient(#D9D9D9, #0042FF);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 500vh;
 }
 
 * {
