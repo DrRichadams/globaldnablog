@@ -1,0 +1,107 @@
+.trending_card_container {
+    background-color: #fff;
+    max-width: 50rem;
+    padding: 1.6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+
+.img_box {
+    --img_size: 280px;
+    background-color: #fff;
+    min-width: var(--img_size);
+    min-height: var(--img_size);
+    max-width: var(--img_size);
+    max-height: var(--img_size);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.img_box img{
+    width: 100%;
+    scale: 150%;
+}
+
+.details_box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.small_titles_box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.date_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: gray;
+}
+
+.date_box div {
+    width: 8px;
+    height: 8px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+.blog_type_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.blog_type_box div {
+    background-color: rgb(93, 93, 93);
+    color: #0042FF;
+    width: 25px;
+    height: 4px;
+}
+
+.blog_type_box p {
+    color: #0042FF;
+    font-weight: 600;
+}
+
+.details_box h3 {
+    font-size: 1.5rem;
+}
+
+.card_story {
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+
+
+
+
+.blog_card_btn button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    color: rgb(94, 94, 94);
+    font-size: 1rem;
+    gap: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.blog_card_btn button:hover {
+    color: blue;
+    transition: 500ms ease-in-out all;
+}
