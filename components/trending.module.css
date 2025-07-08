@@ -1,3 +1,23 @@
+.trending_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+}
+
+.trending_items {
+    display: flex;
+    gap: 4rem;
+    /* THIS MIGHT CAUSE PROBLEMS REMOVE IT IN FUTURE */
+    overflow-y: auto;
+}
+
+.stories_blogs_container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
 .trending_card_container {
     background-color: #fff;
     max-width: 50rem;
@@ -84,10 +104,6 @@
     font-size: 0.9rem;
 }
 
-
-
-
-
 .blog_card_btn button {
     display: flex;
     align-items: center;
@@ -104,4 +120,158 @@
 .blog_card_btn button:hover {
     color: blue;
     transition: 500ms ease-in-out all;
+}
+
+.trending_side_menu {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    /* position: sticky; */
+    /* background-color: red; */
+    min-height: 100vh;
+    top: 0;
+}
+
+.trending_profile {
+    background-color: #fff;
+    max-width: 300px;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+}
+
+
+.profile_img {
+    --profile_size: 80px;
+    min-width: var(--profile_size);
+    min-height: var(--profile_size);
+    max-width: var(--profile_size);
+    max-height: var(--profile_size);
+    border-radius: 50%;
+    border: 5px solid darkgray;
+    /* background-color: #0042FF; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.profile_img img {
+    width: 160%;
+}
+
+.profile_name {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.profile_title {
+    font-weight: 600;
+    color: rgb(152, 152, 152);
+}
+
+.profile_description {
+    font-size: 0.9rem;
+}
+
+
+.profile_btn {
+    margin: 1.5rem 0;
+    background-color: #0042FF;
+    color: #fff;
+    border: none;
+    padding: 12px 1.6rem;
+    border-radius: 8px;
+}
+
+.trending_profile_socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+
+
+.recent_posts_listing_container {
+    background-color: #fff;
+    max-width: 300px;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.recent_posts_title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.recent_posts_title p{
+    font-size: 1.4rem;
+}
+
+.recent_posts_title div{
+    width: 10px;
+    height: 10px;
+    background-color: orange;
+    border-radius: 50%;
+}
+
+.recent_posts_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.recent_post_box {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.recent_post_img_box {
+    --img_size: 65px;
+    /* background-color: red; */
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: var(--img_size);
+    height: var(--img_size);
+    max-width: var(--img_size);
+    max-height: var(--img_size);
+    min-height: var(--img_size);
+    min-width: var(--img_size);
+}
+
+.recent_post_img_box img {
+    width: 160%;
+}
+
+.recent_post_details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.recent_post_details h5{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.recent_post_details p{
+    font-size: .8rem;
+}
+
+.recent_post_box:hover {
+    text-decoration: underline;
 }
