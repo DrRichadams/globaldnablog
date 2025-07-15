@@ -13,9 +13,9 @@ export default function Trending() {
             <div className={styles.trending_items}>
                 <div className={styles.stories_blogs_container}>
                     <TrendingCard />
-                    {/* <TrendingCard />
                     <TrendingCard />
-                    <TrendingCard /> */}
+                    <TrendingCard />
+                    <TrendingCard />
                 </div>
                 <div className={styles.trending_side_menu}>
                     <div className={styles.trending_profile}>

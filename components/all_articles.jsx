@@ -3,6 +3,7 @@
 import styles from "./articles.module.css";
 import { FiSearch } from "react-icons/fi";
 import { useState } from "react";
+import Article_Card from "./article_card";
 
 export default function Articles(){
     const [ active_type, setActive_type ] = useState(1)
@@ -23,7 +24,12 @@ export default function Articles(){
                 </form>
             </div>
             <div className={styles.articles_listing}>
-
+                <Article_Card />
+                <Article_Card />
+                <Article_Card />
+                <Article_Card />
+                <Article_Card />
+                <Article_Card />
             </div>
         </div>
     )

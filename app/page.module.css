@@ -5,6 +5,36 @@
 
   --button-primary-hover: #383838;
   --button-secondary-hover: #f2f2f2;
+}
 
+.footer {
+  background-color: #0B1C2D;
+  min-height: 50vh;
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.footer img{
+  max-width: 200px;
+}
+
+.footer_socials {
+  display: flex;
+  gap: 2rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer_socials li {
+  list-style: none;
+  color: #fff;
+}
+
+.footer_copywrite {
+  color: #fff;
+  font-size: .85rem;
+  margin-top: 1rem;
 }
