@@ -11,7 +11,7 @@
 
 .auth_form_titles {
     position: absolute;
-    top: 90px;
+    top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -28,7 +28,7 @@
     border-radius: 8px;
 }
 
-.auth_form button {
+.auth_btn {
     padding: 8px 1.3rem;
     border: none;
     outline: none;
@@ -37,6 +37,33 @@
     background-color: #0042FF;
     color: #fff;
     border-radius: 8px;
+    cursor: pointer;
+    transition: all 500ms ease-in;
+}
+
+.auth_btn:hover {
+    background-color: #0044ffbe;
+}
+
+.forgot_password_box {
+    /* background-color: red; */
+    max-width: 350px;
+    width: 1000%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.forgot_password_box button {
+    border: none;
+    background-color: transparent;
+    color: blue;
+    cursor: pointer;
+}
+
+.forgot_password_box button:hover {
+    text-decoration: underline;
 }
 
 .error_box {

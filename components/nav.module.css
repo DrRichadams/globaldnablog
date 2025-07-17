@@ -50,3 +50,19 @@
     color: #fff;
 }
 
+.logout_btn {
+    background-color: orangered;
+    color: #fff;
+    padding: 8px 1.5rem;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.logout_btn:hover {
+    /* scale: .95; */
+    background-color: rgb(180, 17, 17);
+}
+
