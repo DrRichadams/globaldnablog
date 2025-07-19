@@ -17,13 +17,13 @@ export default function Home() {
       <main className={styles.main}>
         {/* <Banner />
         <Trending /> */}
-        {/* <Articles /> */}
-        {posts.map((post) => (
+        <Articles />
+        {/* {posts.map((post) => (
           <li key={post.title}>
             <Link href={`/posts/${post.slug}`}>{post.title}</Link>
             <p>{post.date}</p>
           </li>
-        ))}
+        ))} */}
       </main>
       <footer className={styles.footer}>
         <ul className={styles.footer_socials}>

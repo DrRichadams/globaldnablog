@@ -4,7 +4,7 @@ import styles from "./articles.module.css";
 import { FiSearch } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import Article_Card from "./article_card";
-import { getFirestore, collection, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/app/firebase/config";
 import Link from "next/link";
 
@@ -89,7 +89,7 @@ export default function Articles() {
               year: "numeric",
             });
             return (
-              <Link href={`/articles/${article.slug}`} key={article.id}>
+              <Link href={`/posts/${article.slug}`} key={article.id}>
                 <Article_Card
                   title={article.title}
                   readTime={article.readTime}
