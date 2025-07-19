@@ -1,136 +1,149 @@
 .articles_container {
-    padding: 0 15rem;
-    margin-top: 5rem;
+  padding: 0 15rem;
+  margin-top: 5rem;
 }
 
 .articles_menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .articles_munu_search_box {
-    background-color: #fff;
-    width: 230px;
-    display: flex;
-    align-items: center;
-    padding: 0 12px;
-    border-radius: 8px;
+  background-color: #fff;
+  width: 230px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 8px;
 }
 
-.articles_munu_search_box input{
-    padding: 12px;
-    width: 100%;
-    border: none;
-    outline: none;
+.articles_munu_search_box input {
+  padding: 12px;
+  width: 100%;
+  border: none;
+  outline: none;
 }
 
 .articles_menu_items {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .articles_menu_items ul {
-    display: flex;
-    gap: 1.4rem;
+  display: flex;
+  gap: 1.4rem;
 }
 
 .articles_menu_items ul li {
-    list-style: none;
-    cursor: pointer;
-    padding-bottom: 6px;
-    border-bottom: 2px solid transparent;
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
 }
 
 .menu_item_active {
-    border-bottom-color: #0042FF !important;
-    color: #0042FF;
+  border-bottom-color: #0042ff !important;
+  color: #0042ff;
 }
 
 .menu_item_inactive {
-    color: gray;
-    border-bottom-color: transparent !important;
+  color: gray;
+  border-bottom-color: transparent !important;
 }
 
-
 .articles_menu_title {
-    font-size: 1.4rem;
-    /* background-color: red; */
-    font-weight: 600;
-    padding: 8px 2rem 8px 8px;
-    border-right: 2px solid gray;
+  font-size: 1.4rem;
+  /* background-color: red; */
+  font-weight: 600;
+  padding: 8px 2rem 8px 8px;
+  border-right: 2px solid gray;
 }
 
 .articles_listing {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    /* background-color: blue; */
-    /* justify-items: stretch; */
-    gap: 2rem;
-    margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* background-color: blue; */
+  /* justify-items: stretch; */
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 /* STYLING THE ARTICLE CARD */
 
 .article_card_container {
-    background-color: #fff;
-    /* max-width: 320px; */
-    border-radius: 12px;
-    overflow: hidden;
-    padding: 12px;
+  background-color: #fff;
+  /* max-width: 320px; */
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 12px;
+}
+
+.article_card_container:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  text-decoration: underline;
+}
+
+.article_card_container:hover .card_img_box img {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
 }
 
 .card_img_box {
-    position: relative;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
 .card_img_box div {
-    background-color: orangered;
-    color: #fff;
-    font-size: 0.9rem;
-    position: absolute;
-    bottom: 15px;
-    right: 10px;
-    padding: 8px;
-    border-radius: 8px;
+  background-color: orangered;
+  color: #fff;
+  font-size: 0.9rem;
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+  padding: 8px;
+  border-radius: 8px;
 }
 
 .card_img_box img {
-    width: 100%;
-    border-radius: 8px;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .article_card_details_box {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .article_card_date {
-    /* margin-bottom: .5rem; */
-    display: flex;
-    /* align-items: center; */
-    gap: 5px;
-    font-size: .8rem;
-    font-weight: 600;
-    color: gray;
+  /* margin-bottom: .5rem; */
+  display: flex;
+  /* align-items: center; */
+  gap: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: gray;
 }
 
 .article_card_time {
-    color: gray;
-    font-size: .85rem;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  color: gray;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .article_card_time div {
-    width: 6px;
-    height: 6px;
-    background-color: gray;
-    border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  background-color: gray;
+  border-radius: 50%;
 }
 
 /* END OF STYLING THE ARTICLE CARD */

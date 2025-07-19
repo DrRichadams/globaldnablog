@@ -10,34 +10,40 @@ import { FaYoutube } from "react-icons/fa";
 import { getAllPosts } from "@/llib/posts";
 import Link from "next/link";
 
-
-
 export default function Home() {
-  const posts = getAllPosts()
+  const posts = getAllPosts();
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         {/* <Banner />
-        <Trending />
-        <Articles /> */}
-        {
-          posts.map((post) => (
-            <li key={post.title}>
-              <Link href={`/posts/${post.slug}`}>{post.title}</Link>
-              <p>{post.date}</p>
-            </li>
-          ))
-        }
+        <Trending /> */}
+        {/* <Articles /> */}
+        {posts.map((post) => (
+          <li key={post.title}>
+            <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+            <p>{post.date}</p>
+          </li>
+        ))}
       </main>
       <footer className={styles.footer}>
         <ul className={styles.footer_socials}>
-          <li><FaXTwitter /></li>
-          <li><GrInstagram /></li>
-          <li><FaFacebookF /></li>
-          <li><FaYoutube /></li>
+          <li>
+            <FaXTwitter />
+          </li>
+          <li>
+            <GrInstagram />
+          </li>
+          <li>
+            <FaFacebookF />
+          </li>
+          <li>
+            <FaYoutube />
+          </li>
         </ul>
         <img src="/logos/globaldnalogo.png" />
-        <p className={styles.footer_copywrite}>&copy; 2025 Global DNA International</p>
+        <p className={styles.footer_copywrite}>
+          &copy; 2025 Global DNA International
+        </p>
       </footer>
     </div>
   );
