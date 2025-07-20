@@ -99,12 +99,9 @@ export default function Articles() {
               </Link>
             );
           })}
-        {/* <Article_Card />
-        <Article_Card />
-        <Article_Card />
-        <Article_Card />
-        <Article_Card />
-        <Article_Card /> */}
+        {articles.length === 0 && (
+          <div className={styles.no_articles}>No articles found.</div>
+        )}
       </div>
     </div>
   );

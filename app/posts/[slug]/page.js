@@ -42,6 +42,27 @@ export default async function Post({ params }) {
 
   return (
     <article className={styles.slug_article_container}>
+      <nav style={{ marginBottom: "1.5rem" }}>
+        <a
+          href="/"
+          style={{
+            color: "#0042ff",
+            textDecoration: "none",
+            fontWeight: 600,
+            fontSize: "1rem",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: "0.4em",
+            background: "#f4faff",
+            padding: "0.4em 1em",
+            borderRadius: "999px",
+            boxShadow: "0 1px 4px rgba(0,66,255,0.07)",
+          }}
+        >
+          <span style={{ fontSize: "1.2em", lineHeight: 1 }}>&larr;</span> Back
+          to Home
+        </a>
+      </nav>
       <div className={styles.article_header}>
         <p className={styles.article_date}>Published, {formattedDate}</p>
         <h1 className={styles.article_title}>{post.title}</h1>

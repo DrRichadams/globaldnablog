@@ -1,68 +1,108 @@
 .nav_container {
-    background-color: #fff;
-    width: 70%;
-    margin: 0 auto;
-    transform: translateY(10px);
-    border-radius: 1rem;
-}
-
-.nav_container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 3rem;
+  width: 82vw;
+  max-width: 1200px;
+  margin: 2.2rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 2.5rem;
+  background: linear-gradient(90deg, #f4faff 60%, #e3eafc 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px rgba(0, 66, 255, 0.07);
+  position: relative;
+  z-index: 10;
+  transition: box-shadow 0.2s, background 0.2s;
+  margin-bottom: 2rem;
 }
 
 .logos img {
-    max-width: 140px;
-    width: 100%;
+  max-width: 140px;
+  width: 100%;
+  filter: drop-shadow(0 2px 8px rgba(0, 66, 255, 0.07));
 }
 
 .nav_links {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+  position: relative;
+  z-index: 2;
 }
 
 .nav_links li {
-    list-style: none;
+  list-style: none;
+  font-size: 1.08rem;
+  font-weight: 500;
+  color: #0042ff;
+  letter-spacing: 0.5px;
+  padding: 0.2em 0.7em;
+  border-radius: 0.7em;
+  transition: background 0.18s, color 0.18s;
+  cursor: pointer;
 }
 
-
-.auth_sect{
-    display: flex;
-    gap: 12px;
+.nav_links li:hover {
+  background: #e3eafc;
+  color: #00c6ff;
 }
 
-.auth_sect button{
-    border: none;
-    padding: 8px 1.5rem;
-    border-radius: 8px;
+.auth_sect {
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+}
+
+.auth_sect button {
+  border: none;
+  padding: 8px 1.5rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 4px rgba(0, 66, 255, 0.06);
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s;
+  cursor: pointer;
 }
 
 .auth_login {
-    color: #0042FF;
-    background-color: transparent;
+  color: #0042ff;
+  background: transparent;
+  border: 2px solid #0042ff;
+  transition: background 0.18s, color 0.18s;
+}
+.auth_login:hover {
+  background: #e3eafc;
+  color: #00c6ff;
+  border-color: #00c6ff;
 }
 
 .auth_signup {
-    background: #0042FF;
-    color: #fff;
+  background: linear-gradient(90deg, #0042ff 0%, #00c6ff 100%);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 66, 255, 0.1);
+}
+.auth_signup:hover {
+  background: linear-gradient(90deg, #00c6ff 0%, #0042ff 100%);
+  color: #fff;
 }
 
 .logout_btn {
-    background-color: orangered;
-    color: #fff;
-    padding: 8px 1.5rem;
-    border: none;
-    outline: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 300ms ease-in-out;
+  background: linear-gradient(90deg, #ff7043 0%, #ffab91 100%);
+  color: #fff;
+  padding: 8px 1.5rem;
+  border: none;
+  outline: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 1px 4px rgba(255, 112, 67, 0.1);
+  transition: background 0.18s, box-shadow 0.18s;
 }
-
 .logout_btn:hover {
-    /* scale: .95; */
-    background-color: rgb(180, 17, 17);
+  background: linear-gradient(90deg, #d84315 0%, #ff7043 100%);
+  box-shadow: 0 2px 8px rgba(255, 112, 67, 0.18);
 }
-
