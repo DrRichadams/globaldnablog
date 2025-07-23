@@ -83,7 +83,23 @@ export default async function Post({ params }) {
         alt={post.title}
         className={styles.article_image}
       />
-      <div dangerouslySetInnerHTML={{ __html: htmlConverter }} />
+      <div className={styles.article_content}>
+        <div dangerouslySetInnerHTML={{ __html: htmlConverter }} />
+        <div className={styles.article_recent_posts}>
+          <h2>Recent Posts</h2>
+          <ul>
+            <li>
+              <a href="/posts/slug-1">Post Title 1</a>
+            </li>
+            <li>
+              <a href="/posts/slug-2">Post Title 2</a>
+            </li>
+            <li>
+              <a href="/posts/slug-3">Post Title 3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </article>
   );
 }

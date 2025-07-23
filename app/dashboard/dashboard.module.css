@@ -1,4 +1,4 @@
-.dashboard_container {
+.dashboard_layout {
   padding: 3rem 10rem;
   /* background-color: red; */
   min-height: 100vh;
@@ -6,6 +6,14 @@
   display: flex;
   gap: 3rem;
 }
+
+/* .dashboard_container {
+  padding: 3rem 10rem;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  gap: 3rem;
+} */
 
 .dashboard_side_menu {
   display: flex;

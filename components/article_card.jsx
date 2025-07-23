@@ -1,7 +1,9 @@
 import styles from "./articles.module.css";
 import { FaRegCalendar } from "react-icons/fa6";
 
-export default function Article_Card({ title, readTime, date, photo }) {
+export default function Article_Card(props) {
+  const { title, readTime, date, photo } = props;
+  console.log("Article_Card props:", props);
   return (
     <div className={styles.article_card_container}>
       <div className={styles.card_img_box}>

@@ -134,6 +134,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2000;
 }
 
 .new_article_img_selector_modal {

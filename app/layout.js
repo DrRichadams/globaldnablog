@@ -1,5 +1,10 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import styles from "./page.module.css";
+import { FaXTwitter } from "react-icons/fa6";
+import { GrInstagram } from "react-icons/gr";
+import { FaFacebookF } from "react-icons/fa6";
+import { FaYoutube } from "react-icons/fa";
 import Navigation from "@/components/nav";
 
 const geistSans = Geist({
@@ -23,6 +28,26 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navigation />
         {children}
+        <footer className={styles.footer}>
+          <ul className={styles.footer_socials}>
+            <li>
+              <FaXTwitter />
+            </li>
+            <li>
+              <GrInstagram />
+            </li>
+            <li>
+              <FaFacebookF />
+            </li>
+            <li>
+              <FaYoutube />
+            </li>
+          </ul>
+          <img src="/logos/globaldnalogo.png" />
+          <p className={styles.footer_copywrite}>
+            &copy; 2025 Global DNA International
+          </p>
+        </footer>
       </body>
     </html>
   );

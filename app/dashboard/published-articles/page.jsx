@@ -1,21 +1,17 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import styles from "./dashboard.module.css";
-import Article_Card from "@/components/article_card";
+import styles from "../dashboard.module.css";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/app/firebase/config";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 import { auth } from "@/app/firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { useEffect, useState } from "react";
+import Article_Card from "@/components/article_card";
 
-export default function Dashboard() {
-  const router = useRouter();
-  const [articles, setArticles] = useState([]);
-
+export default function PublishedArticlesPage() {
   const [user, loading] = useAuthState(auth);
-
+  const [articles, setArticles] = useState([]);
   async function fetchArticles() {
     try {
       const querySnapshot = await getDocs(collection(db, "articles"));
@@ -41,16 +37,10 @@ export default function Dashboard() {
     fetchArticles();
   }, [user, loading, articles]);
 
-  articles && console.log("Dashboard articles:", articles);
-
-  if (!user) {
-    return <div>Loading...</div>;
-  }
-
   return (
     <div className={styles.dashboard_container}>
       <div className={styles.dashboard_articles_list}>
-        <h3 className={styles.dashboard_main_title}>Unpublished articles</h3>
+        <h3 className={styles.dashboard_main_title}>Published articles</h3>
         <div className={styles.dashboard_articles}>
           {articles.map((article) => (
             <Link

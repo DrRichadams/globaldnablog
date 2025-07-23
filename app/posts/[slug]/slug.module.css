@@ -202,3 +202,24 @@
   border-top: 2px solid #e3eafc;
   margin: 2.2rem 0;
 }
+
+.article_content {
+  display: flex;
+}
+
+.article_recent_posts {
+  flex: 1;
+  margin-left: 2rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 66, 255, 0.1);
+  max-width: 300px;
+  min-width: 300px;
+  width: 100%;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  overflow-y: auto;
+  max-height: calc(100vh - 4rem);
+}
