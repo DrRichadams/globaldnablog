@@ -94,7 +94,7 @@ export default function Articles() {
                   title={article.title}
                   readTime={article.readTime}
                   date={formattedDate}
-                  photo={article.image}
+                  image={article.image}
                 />
               </Link>
             );

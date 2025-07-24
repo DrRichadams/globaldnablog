@@ -7,7 +7,6 @@
   --button-secondary-hover: #f2f2f2;
 }
 
-
 .footer {
   background: linear-gradient(120deg, #0b1c2d 70%, #0042ff 100%);
   min-height: 32vh;
@@ -19,7 +18,7 @@
   padding: 3.5rem 1.5rem 2.5rem 1.5rem;
   border-top-left-radius: 2.5rem;
   border-top-right-radius: 2.5rem;
-  box-shadow: 0 -4px 32px rgba(0,66,255,0.10);
+  box-shadow: 0 -4px 32px rgba(0, 66, 255, 0.1);
   position: relative;
   overflow: hidden;
   gap: 1.5rem;
@@ -76,12 +75,12 @@
 .footer img {
   max-width: 180px;
   margin-bottom: 1.2rem;
-  filter: drop-shadow(0 2px 8px rgba(0,66,255,0.10));
+  filter: drop-shadow(0 2px 8px rgba(0, 66, 255, 0.1));
   z-index: 2;
   border-radius: 1.2rem;
   background: #fff;
   padding: 0.5rem 1.2rem;
-  box-shadow: 0 2px 12px rgba(0,66,255,0.07);
+  box-shadow: 0 2px 12px rgba(0, 66, 255, 0.07);
 }
 
 .footer_socials {
@@ -90,10 +89,10 @@
   font-size: 2.2rem;
   margin-bottom: 1.2rem;
   z-index: 2;
-  background: rgba(255,255,255,0.04);
+  background: rgba(255, 255, 255, 0.04);
   padding: 0.7rem 1.5rem;
   border-radius: 999px;
-  box-shadow: 0 1px 6px rgba(0,66,255,0.07);
+  box-shadow: 0 1px 6px rgba(0, 66, 255, 0.07);
 }
 
 .footer_socials li {
@@ -117,8 +116,8 @@
   letter-spacing: 0.5px;
   z-index: 2;
   text-align: center;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   padding: 0.5rem 1.2rem;
   border-radius: 0.7em;
-  box-shadow: 0 1px 6px rgba(0,66,255,0.07);
+  box-shadow: 0 1px 6px rgba(0, 66, 255, 0.07);
 }

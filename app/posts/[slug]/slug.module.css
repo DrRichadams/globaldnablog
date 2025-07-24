@@ -1,3 +1,119 @@
+/* Sidebar for recent posts */
+.article_recent_posts {
+  flex: 1;
+  margin-left: 2.5rem;
+  background: linear-gradient(120deg, #f4faff 60%, #e3eafc 100%);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 2px 12px rgba(0, 66, 255, 0.07);
+  max-width: 320px;
+  min-width: 260px;
+  width: 100%;
+  position: sticky;
+  top: 2.5rem;
+  height: fit-content;
+  overflow-y: auto;
+  max-height: calc(100vh - 4rem);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transform: translateY(80px);
+}
+
+.article_recent_posts h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0042ff;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.article_recent_posts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.article_recent_posts li {
+  background: #fff;
+  border-radius: 0.7rem;
+  box-shadow: 0 1px 6px rgba(0, 66, 255, 0.06);
+  padding: 0.5rem 0.7rem;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+  font-size: 1.01rem;
+  font-weight: 500;
+  color: #232323;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  min-height: 64px;
+}
+.article_recent_posts li:hover {
+  background: #e3eafc;
+  color: #0042ff;
+  box-shadow: 0 2px 12px rgba(0, 66, 255, 0.13);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.recent_post_img_sidebar {
+  --img_size: 48px;
+  width: var(--img_size);
+  height: var(--img_size);
+  min-width: var(--img_size);
+  min-height: var(--img_size);
+  max-width: var(--img_size);
+  max-height: var(--img_size);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background: #e3eafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.7em;
+}
+.recent_post_img_sidebar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.recent_post_details_sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1;
+  min-width: 0;
+}
+.recent_post_title_sidebar {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0042ff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.recent_post_date_sidebar {
+  font-size: 0.85rem;
+  color: #7b7b7b;
+  margin: 0;
+}
+
+.article_recent_posts a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .slug_article_container {
   display: flex;
   flex-direction: column;
@@ -208,18 +324,49 @@
 }
 
 .article_recent_posts {
-  flex: 1;
-  margin-left: 2rem;
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 2px 10px rgba(0, 66, 255, 0.1);
-  max-width: 300px;
-  min-width: 300px;
-  width: 100%;
-  position: sticky;
-  top: 2rem;
-  height: fit-content;
-  overflow-y: auto;
-  max-height: calc(100vh - 4rem);
+  margin: 0;
+  padding: 0;
+  padding: 1.5rem 0.8rem;
+  min-width: 350px;
+}
+
+.article_recent_posts h2,
+.article_recent_posts ul,
+.article_recent_posts li,
+.article_recent_posts a,
+.article_recent_posts img,
+.article_recent_posts h3,
+.article_recent_posts div {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.recent_post_item a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 9px 12px;
+}
+
+.recent_post_item a img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.recent_post_item a h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #232323;
+  text-wrap: wrap;
+}
+
+.recent_post_item a p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7b7b7b;
 }

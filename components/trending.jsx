@@ -46,9 +46,9 @@ export default async function Trending() {
         <div className={styles.trending_side_menu}>
           <div className={styles.trending_profile}>
             <div className={styles.profile_img}>
-              <img src="/assets/face1.jpg" alt="face" />
+              <img src="/assets/Herbert-Dube.jpg" alt="face" />
             </div>
-            <p className={styles.profile_name}>Boris Ngwere</p>
+            <p className={styles.profile_name}>Herbert Dube</p>
             <p className={styles.profile_title}>Global DNA official writer</p>
             <p className={styles.profile_description}>
               Every week we bring you something new, something exciting and
