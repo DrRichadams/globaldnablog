@@ -11,7 +11,7 @@
 
 .auth_form_titles {
   position: absolute;
-  top: 100px;
+  top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -45,10 +45,19 @@ export default function NewArticle() {
   const [user, loading] = useAuthState(auth);
   const router = useRouter();
 
+  function slugify(title) {
+    return title
+      .toLowerCase()
+      .replace(/[^a-z0-9\s]/g, "") // Remove special characters
+      .trim()
+      .replace(/\s+/g, "-"); // Replace spaces with single dash
+  }
+
   useEffect(() => {
-    let slug_temp = title.toLocaleLowerCase().trim();
-    const withStroke = slug_temp.replace(/\s+/g, "-").trim();
-    setSlug(withStroke);
+    // let slug_temp = title.toLocaleLowerCase().trim();
+    let slugish = slugify(title);
+    // const withStroke = slug_temp.replace(/\s+/g, "-").trim();
+    setSlug(slugish);
   }, [title]);
 
   const handleImageSelect = (image) => {

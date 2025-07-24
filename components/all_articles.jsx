@@ -39,7 +39,7 @@ export default function Articles() {
       <div className={styles.articles_menu}>
         <div className={styles.articles_menu_items}>
           <div className={styles.articles_menu_title}>All Articles</div>
-          <ul>
+          {/* <ul>
             <li
               onClick={() => setActive_type(1)}
               className={
@@ -70,7 +70,7 @@ export default function Articles() {
             >
               DNA Technology
             </li>
-          </ul>
+          </ul> */}
         </div>
         <form className={styles.articles_munu_search_box}>
           <input type="text" placeholder="Search what you want" />

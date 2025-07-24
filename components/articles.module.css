@@ -147,3 +147,63 @@
 }
 
 /* END OF STYLING THE ARTICLE CARD */
+
+/* ADJUSTING SOME STYLES */
+
+.trending_items {
+  background-color: red !important;
+}
+
+@media (max-width: 1325px) {
+  .articles_container {
+    padding: 0 8rem;
+    margin-top: 3rem;
+  }
+  .articles_listing {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .articles_container {
+    padding: 0 4rem;
+    margin-top: 3rem;
+  }
+  .articles_listing {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 870px) {
+  .articles_container {
+    padding: 0 2rem;
+  }
+  .articles_listing {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .articles_container {
+    padding: 0 2rem;
+  }
+  .articles_listing {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .articles_listing {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+}

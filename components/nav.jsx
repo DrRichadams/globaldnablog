@@ -4,11 +4,14 @@ import styles from "./nav.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { auth } from "@/app/firebase/config";
-import { useEffect } from "react";
+import { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
+import { IoIosCloseCircle } from "react-icons/io";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 export default function Navigation() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [user, loading] = useAuthState(auth);
   const router = useRouter();
 
@@ -19,6 +22,11 @@ export default function Navigation() {
     } catch (err) {
       console.error("Logout failed: ", err.message);
     }
+  };
+
+  const mobileNavigate = (route) => {
+    setMobileNavOpen(false);
+    router.push(route);
   };
 
   return (
@@ -38,23 +46,11 @@ export default function Navigation() {
         </li>
       </ul>
       {!loading && user ? (
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem', zIndex: 2 }}>
+        <div className={styles.user_section}>
           <Link href="/dashboard">
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.7em',
-              background: '#f4faff',
-              color: '#0042ff',
-              padding: '0.4em 1.2em',
-              borderRadius: '999px',
-              fontWeight: 600,
-              fontSize: '1rem',
-              boxShadow: '0 1px 4px rgba(0,66,255,0.07)',
-              cursor: 'pointer',
-              transition: 'background 0.18s, color 0.18s',
-            }}>
-              <span style={{ fontSize: '1.2em', lineHeight: 1 }}>🏠</span> Dashboard
+            <div className={styles.dashboard_link}>
+              <span style={{ fontSize: "1.2em", lineHeight: 1 }}>🏠</span>{" "}
+              Dashboard
             </div>
           </Link>
           <button onClick={handleSignout} className={styles.logout_btn}>
@@ -71,6 +67,46 @@ export default function Navigation() {
           </Link>
         </div>
       )}
+      <div
+        className={styles.mobile_nav}
+        style={{ display: mobileNavOpen ? "flex" : "none" }}
+      >
+        <button className={styles.mobile_nav_toggle}>
+          <IoIosCloseCircle
+            size={25}
+            onClick={() => setMobileNavOpen((prev) => !prev)}
+          />
+        </button>
+        <ul>
+          <li onClick={() => mobileNavigate("/")}>Home</li>
+          <li onClick={() => mobileNavigate("/posts")}>Blogs</li>
+          <li onClick={() => mobileNavigate("/contact-us")}>Contact us</li>
+        </ul>
+        <div className={styles.user_auth_state}>
+          {user ? (
+            <button
+              onClick={handleSignout}
+              className={styles.logout_btn_mobile}
+            >
+              Logout
+            </button>
+          ) : (
+            <div className={styles.auth_sect_mobile}>
+              <Link href="/sign-in" onClick={() => setMobileNavOpen(false)}>
+                <button className={styles.auth_login_mobile}>Login</button>
+              </Link>
+              <Link href="/sign-up" onClick={() => setMobileNavOpen(false)}>
+                <button className={styles.auth_signup_mobile}>Sign up</button>
+              </Link>
+            </div>
+          )}
+        </div>
+      </div>
+      <HiOutlineMenuAlt3
+        size={30}
+        onClick={() => setMobileNavOpen((prev) => !prev)}
+        className={styles.mobile_nav_icon}
+      />
     </nav>
   );
 }

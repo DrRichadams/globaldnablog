@@ -11,7 +11,7 @@ export default function Home() {
         <Banner />
         <Trending />
         <Articles />
-        <NewLetter />
+        {/* <NewLetter /> */}
       </main>
     </div>
   );
