@@ -39,10 +39,10 @@ export default function Navigation() {
           <Link href="/">Home</Link>
         </li>
         <li>
-          <Link href="/">Blogs</Link>
+          <Link href="/blogs">Blogs</Link>
         </li>
         <li>
-          <Link href="/">Contact us</Link>
+          <Link href="/contact-us">Contact us</Link>
         </li>
       </ul>
       {!loading && user ? (

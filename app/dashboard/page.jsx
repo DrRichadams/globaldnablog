@@ -9,6 +9,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { auth } from "@/app/firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
+import { IoIosAdd } from "react-icons/io";
+import { CiRead } from "react-icons/ci";
+import { CiUnread } from "react-icons/ci";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -50,6 +53,37 @@ export default function Dashboard() {
   return (
     <div className={styles.dashboard_container}>
       <div className={styles.dashboard_articles_list}>
+        <div className={styles.dashboard_mobile_controls}>
+          <div
+            className={styles.dashboard_mobile_controls_new_title}
+            onClick={() => router.push("/dashboard/add-new-article")}
+          >
+            <p className={styles.new_article_title}>New article</p>
+            <button>
+              <IoIosAdd size={25} />
+            </button>
+          </div>
+          <div
+            className={styles.dashboard_mobile_controls_published}
+            onClick={() => router.push("/dashboard/published-articles")}
+          >
+            <p className={styles.published_article_title}>Published articles</p>
+            <button>
+              <CiUnread size={25} />
+            </button>
+          </div>
+          <div
+            className={styles.dashboard_mobile_controls_unpublished}
+            onClick={() => router.push("/dashboard")}
+          >
+            <p className={styles.unpublished_article_title}>
+              Unpublished article
+            </p>
+            <button>
+              <CiRead size={25} />
+            </button>
+          </div>
+        </div>
         <h3 className={styles.dashboard_main_title}>Unpublished articles</h3>
         <div className={styles.dashboard_articles}>
           {articles.map((article) => (

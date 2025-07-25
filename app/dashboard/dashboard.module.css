@@ -158,3 +158,109 @@
   /* background-color: red; */
   width: 100%;
 }
+
+.dashboard_mobile_controls {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.dashboard_mobile_controls div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.dashboard_mobile_controls div p {
+  display: none;
+  text-align: center;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -40px;
+}
+
+.dashboard_mobile_controls button {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 350ms ease-in-out;
+}
+
+.dashboard_mobile_controls button:hover {
+  background-color: #007aff;
+  color: #fff;
+}
+
+.dashboard_mobile_controls_new_title:hover .new_article_title {
+  display: block;
+}
+.dashboard_mobile_controls_published:hover .published_article_title {
+  display: block;
+}
+.dashboard_mobile_controls_unpublished:hover .unpublished_article_title {
+  display: block;
+}
+
+@media (max-width: 1380px) {
+  .dashboard_layout {
+    padding: 3rem 8rem;
+    /* background-color: red; */
+  }
+}
+
+@media (max-width: 1280px) {
+  .dashboard_layout {
+    padding: 3rem 5rem;
+    /* background-color: red; */
+  }
+}
+
+@media (max-width: 1130px) {
+  .dashboard_layout {
+    padding: 3rem 2rem;
+    /* background-color: red; */
+  }
+}
+
+@media (max-width: 1030px) {
+  .dashboard_articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 940px) {
+  .dashboard_mobile_controls {
+    display: flex;
+  }
+  .dashboard_articles_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .dashboard_articles {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .dashboard_side_menu {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .dashboard_articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
+  .dashboard_articles {
+    grid-template-columns: 1fr;
+  }
+}

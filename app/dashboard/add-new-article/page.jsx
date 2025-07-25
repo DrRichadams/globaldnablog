@@ -222,15 +222,16 @@ export default function NewArticle() {
               autoFocus
             />
           </div>
-          <div className={styles.new_article_slug}>
+          {/* <div className={styles.new_article_slug}>
             <p>Slug:</p>
             <input type="text" value={slug} disabled />
-          </div>
+          </div> */}
           <div className={styles.new_article_article_area}>
             <p>Article</p>
             <textarea
               value={article}
               onChange={(e) => setArticle(e.target.value)}
+              placeholder="Type or paste your article here, it should be in markdown format. If you are unsure of how to do this, write your article in word, then go and tell chat GPT to convert it to markdown, finally, copy and paste the result here"
             />
           </div>
         </div>

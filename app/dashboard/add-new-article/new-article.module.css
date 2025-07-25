@@ -48,7 +48,7 @@
   background-color: #fff;
   width: 100%;
   /* max-width: 300px; */
-  height: 300px;
+  height: 100%;
   border-radius: 8px;
   padding: 1rem;
   text-align: center;
@@ -191,6 +191,7 @@
 
 .selected_blog_img {
   width: 110%;
+  scale: 1.1;
 }
 
 .change_image_button {
@@ -244,4 +245,26 @@
 
 .submit_article_button:hover {
   background-color: #218838;
+}
+
+@media (max-width: 860px) {
+  .new_article_container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .selected_blog_img {
+    scale: 1.5;
+  }
+}
+
+@media (max-width: 770px) {
+  .image_preview_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
 }
