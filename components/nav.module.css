@@ -230,6 +230,10 @@
   width: 100%;
 }
 
+.mobile_nav_icon {
+  display: none;
+}
+
 @media (max-width: 1140px) {
   .nav_links {
     display: none;
@@ -239,6 +243,9 @@
   }
   .auth_sect {
     display: none;
+  }
+  .mobile_nav_icon {
+    display: block;
   }
 }
 

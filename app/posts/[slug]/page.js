@@ -73,7 +73,10 @@ export default async function Post({ params }) {
         className={styles.article_image}
       />
       <div className={styles.article_content}>
-        <div dangerouslySetInnerHTML={{ __html: htmlConverter }} />
+        <div
+          className={styles.article_body}
+          dangerouslySetInnerHTML={{ __html: htmlConverter }}
+        />
         <div className={styles.article_recent_posts}>
           <h2>Recent Posts</h2>
           <ul>

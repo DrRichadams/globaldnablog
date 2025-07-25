@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Navigation />
         {children}
-        {/* <footer className={styles.footer}>
+        <footer className={styles.footer}>
           <ul className={styles.footer_socials}>
             <li>
               <FaXTwitter />
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
           <p className={styles.footer_copywrite}>
             &copy; 2025 Global DNA International
           </p>
-        </footer> */}
+        </footer>
       </body>
     </html>
   );

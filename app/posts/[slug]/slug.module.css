@@ -1,3 +1,7 @@
+.article_body {
+  padding-right: 3rem;
+}
+
 /* Sidebar for recent posts */
 .article_recent_posts {
   flex: 1;
@@ -369,4 +373,55 @@
   margin: 0;
   font-size: 0.9rem;
   color: #7b7b7b;
+}
+
+@media (max-width: 1326px) {
+  .article_recent_posts {
+    /* transform: translateX(100px); */
+  }
+}
+
+@media (max-width: 1240px) {
+  .article_recent_posts {
+    /* transform: translateX(100px); */
+  }
+  .slug_article_container {
+    padding: 12rem 1rem;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .slug_article_container {
+    padding: 0 1rem;
+    margin-top: 2rem;
+  }
+  .article_content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .article_recent_posts {
+    position: static;
+    max-width: 100%;
+    min-width: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 66, 255, 0.05);
+    transform: none;
+  }
+  .recent_post_item a {
+    gap: 0.7rem;
+    padding: 8px 8px;
+  }
+  .recent_post_item a img {
+    width: 70px;
+    height: 70px;
+  }
+  .recent_post_item a h3 {
+    font-size: 0.98rem;
+  }
+  .recent_post_item a p {
+    font-size: 0.85rem;
+  }
 }

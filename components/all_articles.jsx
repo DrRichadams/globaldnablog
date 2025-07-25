@@ -72,10 +72,10 @@ export default function Articles() {
             </li>
           </ul> */}
         </div>
-        <form className={styles.articles_munu_search_box}>
+        {/* <form className={styles.articles_munu_search_box}>
           <input type="text" placeholder="Search what you want" />
           <FiSearch size={26} />
-        </form>
+        </form> */}
       </div>
       <div className={styles.articles_listing}>
         {articles &&

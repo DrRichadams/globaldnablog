@@ -23,8 +23,7 @@ export default function BackBtn() {
       }}
       onClick={() => router.back()}
     >
-      <span style={{ fontSize: "1.2em", lineHeight: 1 }}>&larr;</span> Back to
-      Home
+      <span style={{ fontSize: "1.2em", lineHeight: 1 }}>&larr;</span> Go Back
     </a>
   );
 }
