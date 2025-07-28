@@ -12,6 +12,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { IoIosAdd } from "react-icons/io";
 import { CiRead } from "react-icons/ci";
 import { CiUnread } from "react-icons/ci";
+import LoadingComp from "@/components/loading-comp";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -44,10 +45,10 @@ export default function Dashboard() {
     fetchArticles();
   }, [user, loading, articles]);
 
-  articles && console.log("Dashboard articles:", articles);
+  // articles && console.log("Dashboard articles:", articles);
 
   if (!user) {
-    return <div>Loading...</div>;
+    return <LoadingComp message="Checking auth state..." />;
   }
 
   return (

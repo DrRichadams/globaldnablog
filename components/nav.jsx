@@ -4,14 +4,33 @@ import styles from "./nav.module.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { auth } from "@/app/firebase/config";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { signOut } from "firebase/auth";
 import { IoIosCloseCircle } from "react-icons/io";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
+import { SyncLoader } from "react-spinners";
+import { getFirestore, doc, getDoc } from "firebase/firestore";
+import { db } from "@/app/firebase/config";
+
+async function getUserFromFirestore(id) {
+  // Reference to the document
+  const docRef = doc(db, "users", id);
+
+  // Get the document
+  const docSnap = await getDoc(docRef);
+
+  if (docSnap.exists()) {
+    // console.log("Document data from Nav:", docSnap.data());
+    return docSnap.data();
+  } else {
+    console.log("No such document! from Nav");
+  }
+}
 
 export default function Navigation() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [dashRouting, setDashRouting] = useState(false);
   const [user, loading] = useAuthState(auth);
   const router = useRouter();
 
@@ -28,6 +47,21 @@ export default function Navigation() {
     setMobileNavOpen(false);
     router.push(route);
   };
+
+  async function handleDashboardRouting() {
+    setDashRouting(true);
+    const userData = await getUserFromFirestore(user.uid);
+    setDashRouting(false);
+    if (userData.userType === "admin") {
+      router.push("/admin");
+      return;
+    }
+    if (userData.userType === "author") {
+      router.push("/dashboard");
+      return;
+    }
+    // console.log("User data from nav: ", userData);
+  }
 
   return (
     <nav className={styles.nav_container}>
@@ -47,12 +81,21 @@ export default function Navigation() {
       </ul>
       {!loading && user ? (
         <div className={styles.user_section}>
-          <Link href="/dashboard">
+          <button
+            onClick={() => handleDashboardRouting()}
+            style={{ border: "none" }}
+          >
             <div className={styles.dashboard_link}>
-              <span style={{ fontSize: "1.2em", lineHeight: 1 }}>🏠</span>{" "}
-              Dashboard
+              {dashRouting ? (
+                <SyncLoader size={6} color="#90acf4" />
+              ) : (
+                <p>
+                  <span style={{ fontSize: "1.2em", lineHeight: 1 }}>🏠</span>{" "}
+                  Dashboard
+                </p>
+              )}
             </div>
-          </Link>
+          </button>
           <button onClick={handleSignout} className={styles.logout_btn}>
             Logout
           </button>

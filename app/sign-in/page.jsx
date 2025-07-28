@@ -12,7 +12,7 @@ import {
 } from "react-firebase-hooks/auth";
 import { PuffLoader } from "react-spinners";
 
-const SignUpForm = () => {
+const SignInForm = () => {
   const router = useRouter();
   const [signInUserWithEmailAndPassword] = useSignInWithEmailAndPassword(auth);
   const [email, setEmail] = useState("");
@@ -26,12 +26,14 @@ const SignUpForm = () => {
     setSubmitting(true);
     // Submit form to API (or Firebase, Supabase, etc.)
     await signInUserWithEmailAndPassword(email, password);
-    router.push("/dashboard");
+    setSubmitting(false);
+    // router.push("/dashboard");
+    router.push("/");
   };
 
   useEffect(() => {
     if (!loading && user) {
-      router.push("/dashboard");
+      router.push("/");
     }
   }, [user, loading, router]);
 
@@ -82,4 +84,4 @@ const SignUpForm = () => {
   );
 };
 
-export default SignUpForm;
+export default SignInForm;

@@ -60,7 +60,8 @@ const SignUpForm = () => {
       // Storing user in database
       await saveUserToFirestore(user.uid, user.email);
       console.log("User signed up and stored");
-      router.push("/dashboard");
+      // router.push("/dashboard");
+      router.push("/");
     } catch (err) {
       console.error(err.message);
     }
@@ -68,7 +69,8 @@ const SignUpForm = () => {
 
   useEffect(() => {
     if (!loading && user) {
-      router.push("/dashboard");
+      // router.push("/dashboard");
+      router.push("/");
     }
   }, [user, loading, router]);
 
