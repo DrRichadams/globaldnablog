@@ -5,10 +5,7 @@ import styles from "./auth.module.css";
 import { BeatLoader } from "react-spinners";
 import { useRouter } from "next/navigation";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import {
-  useCreateUserWithEmailAndPassword,
-  useAuthState,
-} from "react-firebase-hooks/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase/config";
 import { useEffect } from "react";
 
@@ -85,6 +82,10 @@ const SignUpForm = () => {
         uid: uid,
         email: email,
         createdAt: new Date().toISOString(),
+        userType: "author",
+        authorName: authorName,
+        isApproved: false,
+        isSuspended: false,
       });
     } catch (err) {
       console.error("Failed to write user to Firestore:", err.message);
