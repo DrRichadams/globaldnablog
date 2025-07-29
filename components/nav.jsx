@@ -66,7 +66,11 @@ export default function Navigation() {
   return (
     <nav className={styles.nav_container}>
       <div className={styles.logos}>
-        <img src="/logos/globaldnalogo.png" alt="Global DNA Logo" />
+        <img
+          src="/logos/globaldnalogo.png"
+          alt="Globa
+        l DNA Logo"
+        />
       </div>
       <ul className={styles.nav_links}>
         <li>

@@ -5,6 +5,7 @@
   width: 100%;
   display: flex;
   gap: 3rem;
+  position: relative;
 }
 
 /* .dashboard_container {
@@ -206,6 +207,25 @@
 }
 .dashboard_mobile_controls_unpublished:hover .unpublished_article_title {
   display: block;
+}
+
+.dashboard_warning_box {
+  /* background-color: #fff3cd;
+  color: #856404; */
+  border: 1px solid #b71c1c;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #ffdddd;
+  color: #b71c1c;
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translate(-50%, -70px);
 }
 
 @media (max-width: 1380px) {

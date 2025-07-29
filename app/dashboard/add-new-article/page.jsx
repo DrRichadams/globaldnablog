@@ -8,6 +8,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../../firebase/config";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useRouter } from "next/navigation";
+import imageList from "../../../data/blog_images_list.json";
 
 export default function NewArticle() {
   const [article, setArticle] = useState(``);
@@ -16,31 +17,6 @@ export default function NewArticle() {
   const [selectedImg, setSelectedImg] = useState(null);
   const [isImageSelector, setIsImageSelector] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
-  const [imageList] = useState([
-    "blog1.jpg",
-    "blog2.jpg",
-    "blog3.jpg",
-    "blog4.jpg",
-    "blog5.jpg",
-    "blog6.jpg",
-    "blog7.jpg",
-    "blog8.jpg",
-    "blog9.jpg",
-    "blog10.jpg",
-    "blog11.jpg",
-    "blog12.jpg",
-    "blog13.jpg",
-    "blog14.jpg",
-    "blog15.jpg",
-    "blog16.jpg",
-    "blog17.jpg",
-    "blog18.jpg",
-    "blog19.jpg",
-    "blog20.jpg",
-    "blog21.jpg",
-    "blog22.jpg",
-  ]);
 
   const [user, loading] = useAuthState(auth);
   const router = useRouter();
