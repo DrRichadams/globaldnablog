@@ -1,6 +1,10 @@
+"use client";
+
 import styles from "./banner.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Banner() {
+  const router = useRouter();
   return (
     <div className={styles.banner_container}>
       <div className={styles.banner_titles}>
@@ -13,7 +17,9 @@ export default function Banner() {
           expert insights, and thought-provoking articles that explore the true
           impact of DNA diagnostics.
         </p>
-        <button className={styles.cta2}>Become a writer</button>
+        <button onClick={() => router.push("/sign-up")} className={styles.cta2}>
+          Become a writer
+        </button>
       </div>
       <div className={styles.banner_img_box}>
         <img src="/assets/banner.jpg" alt="" />
