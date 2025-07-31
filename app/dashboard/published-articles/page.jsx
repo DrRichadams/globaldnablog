@@ -23,7 +23,7 @@ export default function PublishedArticlesPage() {
 
       if (user) {
         const userArticles = articles.filter(
-          (article) => article.authorId === user.uid
+          (article) => article.authorId === user.uid && article.isPublished
         );
         setArticles(userArticles);
       }
