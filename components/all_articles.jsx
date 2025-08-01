@@ -22,7 +22,11 @@ export default function Articles() {
       });
 
       //   console.log(articles);
-      setArticles(articles);
+      const filteredArticles = articles.filter(
+        (article) => article.isPublished && !article.isArchived
+      );
+      setArticles(filteredArticles);
+      // setArticles(articles);
       //   return articles;
     } catch (error) {
       console.error("Error fetching documents:", error);

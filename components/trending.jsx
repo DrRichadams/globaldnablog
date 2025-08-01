@@ -17,7 +17,7 @@ export default async function Trending() {
         articles.push({ id: doc.id, ...doc.data() });
       });
 
-      console.log("trending articles:", articles);
+      // console.log("trending articles:", articles);
       return articles;
     } catch (error) {
       console.error("Error fetching documents:", error);
@@ -30,16 +30,23 @@ export default async function Trending() {
   if (!articles || articles.length === 0) {
     return <p>No trending articles available.</p>;
   }
+
+  const verifiedArticles = articles
+    .filter((article) => article.isPublished && !article.isArchived)
+    .sort((a, b) => (b.trendingCount || 0) - (a.trendingCount || 0));
+
+  // console.log("Allowed articles: ", verifiedArticles);
+
   return (
     <div className={styles.trending_container}>
       <h2>Trending Blogs & Stories</h2>
       <div className={styles.trending_items}>
         <div className={styles.stories_blogs_container}>
-          {articles.slice(0, 4).map((article) => (
+          {verifiedArticles.slice(0, 4).map((article) => (
             <TrendingCard
               key={article.id}
               {...article}
-              date={article.createdAt}
+              date={article.publishedOn}
             />
           ))}
         </div>
@@ -68,13 +75,14 @@ export default async function Trending() {
               <p>Recent Posts</p>
             </div>
             <div className={styles.recent_posts_list}>
-              {/* START OF LIST BOX */}
               {articles
-                .slice()
-                .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+                .filter((article) => article.isPublished && !article.isArchived)
+                .sort(
+                  (a, b) => new Date(b.publishedOn) - new Date(a.publishedOn)
+                )
                 .slice(0, 3)
                 .map((article) => {
-                  const date = new Date(article.createdAt);
+                  const date = new Date(article.publishedOn);
                   const formattedDate = date.toLocaleDateString("en-US", {
                     day: "numeric",
                     month: "long",

@@ -79,6 +79,7 @@ export default function AdminArticles() {
     try {
       await updateDoc(docRef, {
         isPublished: articleFind.isPublished,
+        publishedOn: new Date().toISOString(),
       });
       console.log("Document updated successfully");
     } catch (error) {
