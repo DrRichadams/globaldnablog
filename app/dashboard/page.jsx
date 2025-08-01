@@ -61,7 +61,7 @@ export default function Dashboard() {
           >
             <p className={styles.new_article_title}>New article</p>
             <button>
-              <IoIosAdd size={25} />
+              <IoIosAdd size={25} color="black" />
             </button>
           </div>
           <div
@@ -70,7 +70,7 @@ export default function Dashboard() {
           >
             <p className={styles.published_article_title}>Published articles</p>
             <button>
-              <CiUnread size={25} />
+              <CiUnread size={25} color="black" />
             </button>
           </div>
           <div
@@ -81,7 +81,7 @@ export default function Dashboard() {
               Unpublished article
             </p>
             <button>
-              <CiRead size={25} />
+              <CiRead size={25} color="black" />
             </button>
           </div>
         </div>
