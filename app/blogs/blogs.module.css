@@ -1,0 +1,34 @@
+.blogs_container {
+  min-height: 100vh;
+  padding: 0 10rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.blog_card {
+  background-color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.blogs_list {
+}
+.blog_item {
+}
+
+.blog_img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.blogs_titles {
+  padding: 1rem 11rem;
+  margin-bottom: 3rem;
+}
+
+.blogs_titles h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}

@@ -1,0 +1,100 @@
+.contacts_container {
+  max-width: 700px;
+  margin: 3rem auto;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0, 66, 255, 0.09);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contacts_title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0042ff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1.1px;
+  text-align: center;
+}
+
+.contacts_subtitle {
+  font-size: 1.1rem;
+  color: #4a5a6a;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.contacts_form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contacts_form label {
+  font-weight: 600;
+  color: #0042ff;
+  margin-bottom: 0.3rem;
+}
+
+.contacts_form input,
+.contacts_form textarea {
+  width: 100%;
+  padding: 0.9rem 1.1rem;
+  border-radius: 0.7rem;
+  border: 1.5px solid #e3eafc;
+  background: #f4faff;
+  font-size: 1rem;
+  color: #232323;
+  transition: border 0.18s;
+  resize: none;
+}
+.contacts_form input:focus,
+.contacts_form textarea:focus {
+  border: 1.5px solid #0042ff;
+  outline: none;
+}
+
+.contacts_form button {
+  background: linear-gradient(90deg, #0042ff 0%, #00c6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  box-shadow: 0 2px 8px rgba(0, 66, 255, 0.09);
+  cursor: pointer;
+  transition: background 0.18s, box-shadow 0.18s, transform 0.13s;
+}
+.contacts_form button:hover {
+  background: linear-gradient(90deg, #00c6ff 0%, #0042ff 100%);
+  box-shadow: 0 6px 24px rgba(0, 66, 255, 0.13);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.contacts_info {
+  background: #f4faff;
+  border-radius: 1rem;
+  padding: 1.2rem 1.5rem;
+  color: #232323;
+  font-size: 1.05rem;
+  box-shadow: 0 1px 6px rgba(0, 66, 255, 0.07);
+  margin-top: 1.5rem;
+}
+.contacts_info strong {
+  color: #0042ff;
+}
+
+@media (max-width: 700px) {
+  .contacts_container {
+    padding: 1.2rem 0.3rem;
+    border-radius: 0.7rem;
+  }
+  .contacts_info {
+    padding: 0.7rem 0.5rem;
+    border-radius: 0.5rem;
+  }
+}

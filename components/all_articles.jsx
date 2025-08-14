@@ -85,7 +85,7 @@ export default function Articles() {
         {articles &&
           articles.map((article) => {
             console.log(article);
-            const dateString = article.createdAt;
+            const dateString = article.publishedOn;
             const date = new Date(dateString);
             const formattedDate = date.toLocaleDateString("en-US", {
               day: "numeric",

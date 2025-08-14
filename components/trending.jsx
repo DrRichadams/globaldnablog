@@ -32,10 +32,13 @@ export default async function Trending() {
   }
 
   const verifiedArticles = articles
-    .filter((article) => article.isPublished && !article.isArchived)
+    .filter(
+      (article) =>
+        article.isPublished && !article.isArchived && article.isFeatured
+    )
     .sort((a, b) => (b.trendingCount || 0) - (a.trendingCount || 0));
 
-  // console.log("Allowed articles: ", verifiedArticles);
+  console.log("Allowed articles: ", verifiedArticles);
 
   return (
     <div className={styles.trending_container}>
