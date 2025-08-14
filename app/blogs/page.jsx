@@ -21,7 +21,12 @@ export default function Blogs() {
             id: doc.id,
             ...doc.data(),
           }));
-          setBlogs(articles);
+          // articles.filter(article => article.isPublished && !article.isArchived);
+          setBlogs(
+            articles.filter(
+              (article) => article.isPublished && !article.isArchived
+            )
+          );
         } catch (error) {
           setBlogs([]);
         } finally {
