@@ -126,7 +126,7 @@ export default function Navigation() {
         </button>
         <ul>
           <li onClick={() => mobileNavigate("/")}>Home</li>
-          <li onClick={() => mobileNavigate("/posts")}>Blogs</li>
+          <li onClick={() => mobileNavigate("/blogs")}>Blogs</li>
           <li onClick={() => mobileNavigate("/contact-us")}>Contact us</li>
         </ul>
         <div className={styles.user_auth_state}>

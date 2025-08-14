@@ -6,7 +6,6 @@ import { collection, getDocs, getFirestore } from "firebase/firestore";
 import { db } from "../firebase/config";
 import Link from "next/link";
 import LoadingComp from "@/components/loading-comp";
-import Article_Card from "@/components/article_card";
 
 export default function Blogs() {
   function useFetchBlogs() {
