@@ -39,6 +39,8 @@
   width: 100%;
   max-width: 500px;
   padding: 1rem;
+  background-color: #fff;
+  color: #000;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 1rem;
