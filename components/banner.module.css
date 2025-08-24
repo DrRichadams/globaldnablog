@@ -8,6 +8,7 @@
   box-shadow: 0 6px 32px rgba(0, 66, 255, 0.08);
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .banner_container::before {
@@ -118,6 +119,18 @@
   transform: translateY(-2px) scale(1.03);
 }
 
+.ico_box {
+  position: absolute;
+  /* top: 1.5rem; */
+  left: 50%;
+  /* transform: translateX(-50%); */
+  background-color: rgba(241, 94, 94, 0.752);
+  color: #fff;
+  font-size: 0.8rem;
+  border-radius: 1rem;
+  padding: 8px 2rem;
+}
+
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
@@ -167,6 +180,13 @@
     opacity: 0.3;
     border-radius: 0;
     width: 100%;
+  }
+}
+
+@media (max-width: 730px) {
+  .ico_box {
+    left: 60%;
+    padding: 8px 2rem;
   }
 }
 

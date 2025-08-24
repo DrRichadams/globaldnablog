@@ -12,6 +12,7 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { SyncLoader } from "react-spinners";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { db } from "@/app/firebase/config";
+import { PiMedalFill } from "react-icons/pi";
 
 async function getUserFromFirestore(id) {
   // Reference to the document
@@ -154,6 +155,12 @@ export default function Navigation() {
         onClick={() => setMobileNavOpen((prev) => !prev)}
         className={styles.mobile_nav_icon}
       />
+      <div className={styles.iso_ico}>
+        <div className={styles.iso_medal}>
+          <PiMedalFill size={30} color="#FFD700" />
+        </div>
+        ISO 17025
+      </div>
     </nav>
   );
 }

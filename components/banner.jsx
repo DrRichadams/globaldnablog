@@ -8,6 +8,7 @@ export default function Banner() {
   return (
     <div className={styles.banner_container}>
       <div className={styles.banner_titles}>
+        {/* <p className={styles.ico_box}>ISO 17025</p> */}
         <h1 className={styles.banner_tag}>#Global DNA International Blog</h1>
         <h2 className={styles.main_banner_title}>
           DNA Stories and articles: Exploring the Power of Genetic Science
